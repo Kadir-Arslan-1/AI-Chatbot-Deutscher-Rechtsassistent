@@ -1,0 +1,195 @@
+{
+    "StGB": [
+        "bmj.de",
+        "generalbundesanwalt.de",
+        "polizei-beratung.de",
+        "bka.de"],
+    "BGB": [
+        "www.bmj.de",
+        "verbraucherzentrale.de",
+        "service-bw.de"],
+    "HGB": [
+        "ihk.de",
+        "bmj.de",
+        "unternehmensportal.info",
+        "existenzgruendungsportal.de"
+    ],
+    "GmbHG": [
+        "existenzgruendungsportal.de",
+        "ihk.de",
+        "unternehmensportal.info",
+        "bmj.de"
+    ],
+    "AktG": [
+        "existenzgruendungsportal.de",
+        "ihk.de",
+        "unternehmensportal.info",
+        "bmj.de"
+    ],
+    "ArbZG": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "baua.de",
+        "verwaltung.bund.de",
+        "ihk.de"
+    ],
+    "KSchG": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "antidiskriminierungsstelle.de",
+        "verwaltung.bund.de",
+        "ihk.de"
+    ],
+    "BetrVG": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "boeckler.de",
+        "antidiskriminierungsstelle.de",
+        "ihk.de"
+    ],
+    "DSGVO": [
+        "bfdi.bund.de",
+        "bmj.de",
+        "verwaltung.bund.de",
+        "https://commission.europa.eu",
+        "ihk.de"
+    ],
+    "DDG": [
+        "bmj.de",
+        "bundesnetzagentur.de",
+        "bmwk.de",
+        "bfdi.bund.de"
+    ],
+    "UrhG": [
+        "bmj.de",
+        "dpma.de",
+        "euipo.europa.eu",
+        "verwaltung.bund.de"
+    ],
+    "GG": [
+        "bpb.de",
+        "bmj.de",
+        "bundesverfassungsgericht.de",
+        "bundestag.de"
+    ],
+    "AGG": [
+        "antidiskriminierungsstelle.de",
+        "bmas.de",
+        "bmj.de",
+        "institut-fuer-menschenrechte.de"
+    ],
+    "GeschGehG": [
+        "bmj.de",
+        "dpma.de",
+        "bmwk.de",
+        "bsi.bund.de"
+    ],
+    "GewO": [
+        "ihk.de",
+        "existenzgruendungsportal.de",
+        "unternehmensportal.info",
+        "bmwk.de"
+    ],
+    "OWiG": [
+        "bmj.de",
+        "bussgeldkatalog.org",
+        "polizei-beratung.de",
+        "bka.de"
+    ],
+    "AufenthG": [
+        "bamf.de",
+        "make-it-in-germany.com",
+        "bmi.bund.de",
+        "auswaertiges-amt.de"
+    ],
+    "WoGG": [
+        "verwaltung.bund.de",
+        "bmwsb.bund.de",
+        "wohngeld.org",
+        "verbraucherzentrale.de"
+    ],
+    "FreizügG/EU": [
+        "bamf.de",
+        "make-it-in-germany.com",
+        "europa.eu",
+        "bmi.bund.de"
+    ],
+    "BAföG": [
+        "bafoeg.de",
+        "bmbf.de",
+        "studentenwerke.de",
+        "verwaltung.bund.de"
+    ],
+    "AO": [
+        "bundesfinanzministerium.de",
+        "elster.de",
+        "bzst.de",
+        "formulare-bfinv.de"
+    ],
+    "EStG": [
+        "bundesfinanzministerium.de",
+        "elster.de",
+        "lohn-info.de",
+        "bzst.de"
+    ],
+    "StVO": [
+        "bmvi.de",
+        "bast.de",
+        "polizei-beratung.de",
+        "dvr.de"
+    ],
+    "SGB_1": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "SGB_2": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "SGB_3": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "SGB_4": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "SGB_5": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "SGB_9": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "SGB_10": [
+        "bmas.de",
+        "arbeitsagentur.de",
+        "deutsche-rentenversicherung.de",
+        "bundesgesundheitsministerium.de",
+        "bundesfachstelle-barrierefreiheit.de"
+    ],
+    "DEFAULT": [
+        "bmj.de",
+        "verbraucherzentrale.de",
+        "ihk.de"
+    ]
+}

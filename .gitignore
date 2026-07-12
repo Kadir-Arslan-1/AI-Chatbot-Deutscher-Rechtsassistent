@@ -1,0 +1,42 @@
+token_counter.py
+
+# Umgebungsvariablen
+.env
+.env.local
+.streamlit/secrets.toml
+
+
+# Virtuelle Umgebungen
+venv/
+.venv/
+env/
+.env_folder/
+
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+
+# Lokale Modelle & HuggingFace Cache
+*.bin
+*.pt
+*.h5
+*.safetensors
+.cache/
+huggingface/
+
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db

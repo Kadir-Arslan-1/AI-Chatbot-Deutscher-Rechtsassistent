@@ -1,0 +1,902 @@
+{
+  "BGB": {
+    "Mietrecht": 15,
+    "Mietminderung": 5,
+    "Mieterhöhung": 5,
+    "Mietvertrag": 15,
+    "Kündigung Mietvertrag": 10,
+    "Eigenbedarfskündigung": 10,
+    "Schönheitsreparaturen": 5,
+    "Kaufvertrag": 12,
+    "Rücktritt Kaufvertrag": 8,
+    "Vertragsrecht": 2,
+    "Schadensersatz": 8,
+    "Nacherfüllung": 8,
+    "Verbrauchsgüterkauf": 8,
+    "Schadensersatz Verkehrsunfall": 2,
+    "Gewährleistung": 12,
+    "Sachmangel": 8,
+    "Verbraucherschutz": 8,
+    "Anfechtung": 8,
+    "Vertragsschluss": 8,
+    "Werkvertrag": 6,
+    "Darlehensvertrag": 6,
+    "Dienstvertrag": 6,
+    "Bürgschaft": 4,
+    "Fernabsatzvertrag": 6,
+    "Nachbarschaftsrecht": 3,
+    "Haftung": 8,
+    "Verzug": 8,
+    "Schmerzensgeld Körperverletzung": 3,
+    "Schmerzensgeld": 5,
+    "Persönlichkeitsrecht": 6,
+    "Widerrufsrecht": 5,
+    "Widerrufsrecht Fernabsatzvertrag": 2,
+    "Unterhalt Scheidung Ehegatte": 3,
+    "Familienrecht": 8,
+    "Unterhalt": 8,
+    "Ehescheidung": 4,
+    "Kindesunterhalt": 2,
+    "Erbrecht": 5,
+    "Pflichtteil": 4,
+    "Enterbung": 1,
+    "Eigentum": 8,
+    "Eigentumsübertragung": 6,
+    "AGB Inhaltskontrolle Klausel": 3,
+    "Allgemeine Geschäftsbedingungen": 12,
+    "AGB-Kontrolle": 4,
+    "Deliktsrecht": 5,
+    "Zugewinnausgleich Trennung": 4,
+    "Verkehrsunfall Haftung": 6,
+    "Pflichtversicherung": 4,
+    "Verjährung": 4,
+    "Testament": 2,
+    "Bereicherungsrecht": 2,
+    "Darlehen Kündigung Zinsen": 3,
+    "Datenschutz Schadensersatz": 4,
+    "Digitale Inhalte Vertrag": 4
+  },
+    "StGB": {
+      "Diebstahl": 10,
+      "Wohnungseinbruchdiebstahl": 5,
+      "Raub": 7,
+      "Hausfriedensbruch": 2,
+      "Erpressung": 8,
+      "Räuberische Erpressung": 3,
+      "Körperverletzung": 15,
+      "Gefährlich Körperverletzung": 7,
+      "Schwere Körperverletzung": 4,
+      "Fahrlässige Körperverletzung": 3,
+      "Bedrohung": 4,
+      "Totschlag": 8,
+      "Betrug Verletzung": 10,
+      "Computerbetrug": 7,
+      "Urkundenfälschung": 10,
+      "Fälschung Daten": 4,
+      "Kapitalanlagebetrug": 2,
+      "Datenveränderung Verletzung": 2,
+      "Ausspähen von Daten": 3,
+      "Nachstellung": 8,
+      "Untreue": 10,
+      "Unterschlagung": 6,
+      "Geldwäsche": 5,
+      "Beleidigung": 8,
+      "Nötigung Verletzung": 5,
+      "Sexuell Nötigung": 4,
+      "Sexuell Missbrauch": 4,
+      "Üble Nachrede": 4,
+      "Verleumdung": 3,
+      "Meinungsfreiheit Verletzung": 4,
+      "Trunkenheit im Verkehr": 2,
+      "Trunkenheit Verletzung": 3,
+      "Nötigung Straßenverkehr": 3,
+      "Vermögensnachteil Verletzung": 3,
+      "Sachbeschädigung": 8,
+      "Widerstand gegen Vollstreckungsbeamte": 3,
+      "Unterlassene Hilfeleistung": 2,
+      "Heimtücke": 2,
+      "Bestechung": 6,
+      "Mord": 3,
+      "Cyber verletzung": 6,
+      "Bestechlichkeit": 4,
+      "Korruption": 4,
+      "Identitätsdiebstahl": 3,
+      "Abfangen von Daten": 4,
+      "Online-Betrug": 6,
+      "Mobbing": 7,
+      "Versuch einer Straftat": 5,
+      "Täterschaft und Teilnahme": 5,
+      "Persönlichkeitsrechtsverletzung": 5,
+      "Hackerangriff": 2,
+      "Phishing": 3
+    },
+    "ArbZG": {
+      "Arbeitszeit": 6,
+      "Überstunden": 4,
+      "Arbeitszeiterfassung": 4,
+      "Vertrauensarbeitszeit": 3,
+      "Ruhezeit": 3,
+      "Ruhepause": 4,
+      "Pausenregelung": 2,
+      "Nachtarbeit": 3,
+      "Schichtarbeit": 3,
+      "Bereitschaftsdienst": 3,
+      "Dienstreise Arbeitszeit": 2,
+      "Homeoffice Arbeitszeit": 3,
+      "Mobile Arbeit Arbeitszeit": 3,
+      "Teilzeit Arbeitszeit": 4,
+      "Jugendarbeit Arbeitszeit": 2,
+      "Arbeitszeitkonten": 3,
+      "Arbeitszeitbetrug": 2,
+      "Arbeitsunterbrechung": 2
+    },
+    "DSGVO": {
+      "Personenbezogene Daten": 8,
+      "Datenverarbeitung": 8,
+      "Daten Einwilligung": 8,
+      "Widerruf Einwilligung": 4,
+      "Künstliche Intelligenz": 5,
+      "Rechtmäßigkeit der Verarbeitung": 6,
+      "Datenschutz Verletzung": 8,
+      "Datenschutz-Folgenabschätzung": 4,
+      "Auskunftsanspruch DSGVO": 10,
+      "Recht auf Löschung Daten": 8,
+      "Recht auf Berichtigung Daten": 4,
+      "Daten Übertragung": 7,
+      "Widerspruch gegen Datenverarbeitung": 4,
+      "Automatisierung": 6,
+      "Profiling": 4,
+      "Künstliche Intelligenz Datenschutz": 4,
+      "Beschäftigtendatenschutz": 4,
+      "Videoüberwachung": 10,
+      "E-Mail Datenschutz": 4,
+      "Kundendaten": 4,
+      "Tracking": 6,
+      "Cookies": 6,
+      "Google Analytics": 4,
+      "Auftragsverarbeitung": 6,
+      "Datenschutzbeauftragter": 4,
+      "Datenübermittlung": 2,
+      "DSGVO Drittländer": 5,
+      "Schrems II": 3,
+      "Cloud Datenschutz": 2,
+      "Social Media Datenschutz": 4,
+      "Datenschutz Schadensersatz": 10,
+      "Immaterieller Schaden DSGVO": 8,
+      "Bußgeld Datenschutz": 4,
+      "Datensicherheit": 4,
+      "Privacy by Design": 2
+    },
+    "BDSG": {
+      "Mitarbeiter Datenschutz": 12,
+      "Mitarbeiter überwachung": 8,
+      "Überwachung Arbeitsplatz": 3,
+      "Personalakte Datenschutz": 4,
+      "Bewerbungsverfahren Datenschutz": 3,
+      "E-Mail Kontrolle Arbeitgeber": 4,
+      "Internetnutzung Arbeitnehmer": 4,
+      "Datenschutz beauftragter": 6,
+      "Abberufung Datenschutzbeauftragter": 4,
+      "Scoring": 5,
+      "Bonitätsprüfung": 5,
+      "SCHUFA": 8,
+      "Öffentliche Stelle Datenschutz": 4,
+      "Behördliche Datenverarbeitung": 4,
+      "Gesundheitsdaten": 6,
+      "Biometrische Daten": 4,
+      "DSGVO Schadensersatz": 5,
+      "Bußgeld Datenschutz": 4,
+      "Auskunftsanspruch Arbeitnehmer": 4,
+      "Betriebsrat Datenschutz": 4,
+      "Betriebsvereinbarung Datenschutz": 4
+    },
+    "BetrVG": {
+      "Betriebsrat": 15,
+      "Mitbestimmung": 15,
+      "Mitbestimmungsrecht": 10,
+      "Betriebsratswahl": 10,
+      "Wahlvorstand": 4,
+      "Anfechtung Betriebsratswahl": 6,
+      "Betriebsvereinbarung": 12,
+      "Gesamtbetriebsvereinbarung": 4,
+      "Interessenausgleich": 8,
+      "Sozialplan": 8,
+      "Personelle Einzelmaßnahmen": 5,
+      "Einstellung Arbeitnehmer": 4,
+      "Versetzung Arbeitnehmer": 4,
+      "Umgruppierung": 4,
+      "Eingruppierung": 4,
+      "Kündigung Betriebsratsmitglied": 6,
+      "Sonderkündigungsschutz Betriebsrat": 6,
+      "Informationsrecht Betriebsrat": 6,
+      "Unterrichtung Betriebsrat": 4,
+      "Anhörung Betriebsrat": 8,
+      "Arbeitszeiterfassung Betriebsrat": 8,
+      "Überstunden Mitbestimmung": 6,
+      "Schichtplan Mitbestimmung": 6,
+      "Dienstplan Mitbestimmung": 4,
+      "Homeoffice Mitbestimmung": 4,
+      "Mobile Arbeit Mitbestimmung": 4,
+      "Datenschutz Betriebsrat": 4,
+      "Künstliche Intelligenz Betriebsrat": 3,
+      "Betriebsänderung": 8,
+      "Betriebsübergang": 6,
+      "Wirtschaftsausschuss": 4,
+      "Gesamtbetriebsrat": 4,
+      "Konzernbetriebsrat": 4,
+      "Freistellung Betriebsrat": 4,
+      "Schulung Betriebsrat": 4,
+      "Einigungsstelle": 8,
+      "Beschlussverfahren": 7
+  },
+  "KSchG": {
+    "Kündigungsschutz": 15,
+    "Ordentlich Kündigung": 7,
+    "Außerordentlich Kündigung": 3,
+    "Fristlos Kündigung": 12,
+
+    "Betriebsbedingte Kündigung": 4,
+    "Personenbedingte Kündigung": 12,
+    "Verhaltensbedingte Kündigung": 6,
+
+    "Sozialauswahl": 12,
+    "Sozialwidrigkeit": 10,
+    "Weiterbeschäftigungsanspruch": 6,
+    "Abmahnung": 10,
+    "Pflichtverletzung": 5,
+
+    "Krankheitsbedingte Kündigung": 8,
+    "Langzeiterkrankung": 5,
+
+    "Massenentlassung": 8,
+    "Massenentlassungsanzeige": 6,
+
+    "Änderungskündigung": 8,
+    "Änderungsangebot": 4,
+
+    "Probezeit Kündigung": 4,
+    "Kündigung Kleinbetrieb": 4,
+
+    "Druckkündigung": 4,
+    "Verdachtskündigung": 8,
+
+    "Betriebsübergang Kündigung": 6,
+    "Aufhebungsvertrag": 6,
+    "Abfindung": 8,
+
+    "Diskriminierende Kündigung": 4,
+    "Whistleblower Kündigung": 2,
+
+    "Sonderkündigungsschutz": 6,
+
+    "Schwerbehinderte Kündigung": 4,
+    "Schwangere Kündigung": 4,
+
+    "Kündigung wegen Arbeitszeitbetrug": 4,
+    "Kündigung wegen Diebstahl": 4,
+    "Kündigung wegen Beleidigung": 4
+  },
+  "AGG": {
+    "Altersdiskriminierung": 10,
+    "Geschlechts Diskriminierung": 10,
+    "Diskriminierung Bewerbung": 10,
+    "AGG Benachteiligung": 8,
+
+    "Behinderung Diskriminierung": 8,
+    "Schwerbehinderung Benachteiligung": 5,
+
+    "Schwangerschaft Diskriminierung": 6,
+    "Mutterschaft Benachteiligung": 3,
+
+    "Ethnische Herkunft Diskriminierung": 6,
+    "Rassistische Diskriminierung": 4,
+
+    "Religiöse Diskriminierung": 5,
+    "Weltanschauung Diskriminierung": 3,
+
+    "Sexuelle Identität Diskriminierung": 5,
+    "Sexuelle Orientierung Diskriminierung": 4,
+
+    "Belästigung Arbeitsplatz": 5,
+    "Sexuelle Belästigung": 6,
+
+    "Entschädigung AGG": 8,
+    "Schadensersatz AGG": 6,
+
+    "Stellenausschreibung Diskriminierung": 6,
+    "Absage Bewerbung": 4,
+
+    "Gleichbehandlung Arbeitnehmer": 4,
+    "Ungleichbehandlung": 4,
+
+    "Mobbing Diskriminierung": 2,
+    "Diskriminierung Kündigung": 2
+  },
+  "AufenthG": {
+    "Studium Aufenthaltserlaubnis": 12,
+    "Studium visum": 5,
+    "Fachkraft Aufenthaltserlaubnis": 12,
+    "Blaue Karte EU": 10,
+
+    "Niederlassungserlaubnis": 15,
+    "Daueraufenthalt EU": 5,
+
+    "Familiennachzug": 15,
+    "Ehegattennachzug": 8,
+    "Kindernachzug": 4,
+
+    "Aufenthaltsverlängerung": 8,
+    "Aufenthaltserlaubnis": 10,
+
+    "Erwerbstätigkeit Ausländer": 10,
+    "Beschäftigungserlaubnis": 8,
+
+    "Ausweisung": 10,
+    "Abschiebung": 12,
+    "Abschiebungsverbot": 8,
+
+    "Duldung": 10,
+    "Humanitärer Aufenthalt": 8,
+
+    "Asyl Folgeaufenthalt": 4,
+    "Aufenthaltsbeendigung": 6,
+
+    "Einbürgerung Aufenthalt": 4,
+
+    "Passpflicht": 4,
+    "Identitätsklärung": 6,
+
+    "Integrationskurs": 4,
+    "Sprachnachweis Aufenthalt": 4,
+
+    "Wechsel Aufenthaltszweck": 8,
+    "Studium zu Erwerbstätigkeit": 6,
+
+    "Visumverfahren": 6,
+    "Ausländerbehörde": 6,
+
+    "Sicherung Lebensunterhalt": 8,
+    "Wohnsitzauflage": 4,
+
+    "Widerruf Aufenthaltserlaubnis": 8,
+    "Rücknahme Aufenthaltserlaubnis": 4
+  },
+  "GG": {
+    "Menschenwürde": 12,
+    "Allgemeine Handlungsfreiheit": 8,
+    "Informationelle Selbstbestimmung": 10,
+    "Datenschutz Grundrechte": 6,
+
+    "Meinungsfreiheit": 10,
+    "Pressefreiheit": 8,
+    "Kunstfreiheit": 4,
+    "Wissenschaftsfreiheit": 4,
+
+    "Religionsfreiheit": 8,
+    "Weltanschauungsfreiheit": 4,
+
+    "Gleichheitsgrundsatz": 12,
+    "Diskriminierungsverbot": 8,
+
+    "Berufsfreiheit": 12,
+    "Eigentumsgarantie": 10,
+    "Enteignung": 4,
+
+    "Ehe und Familie": 8,
+    "Elternrecht": 4,
+    "Kindeswohl": 4,
+
+    "Versammlungsfreiheit": 8,
+    "Vereinigungsfreiheit": 4,
+
+    "Briefgeheimnis": 4,
+    "Fernmeldegeheimnis": 6,
+
+    "Unverletzlichkeit der Wohnung": 8,
+    "Hausdurchsuchung": 6,
+
+    "Rechtliches Gehör": 8,
+    "Effektiver Rechtsschutz": 8,
+
+    "Verhältnismäßigkeitsgrundsatz": 12,
+
+    "Vertrauensschutz": 6,
+    "Rückwirkungsverbot": 4,
+
+    "Schulwesen Grundrechte": 4,
+    "Hochschulzulassung": 4,
+
+    "Beamtenrecht Verfassung": 4,
+
+    "Polizeirecht Grundrechte": 8,
+    "Videoüberwachung Grundrechte": 4,
+
+    "Digitale Grundrechte": 6,
+    "Internetfreiheit": 4,
+
+    "Künstliche Intelligenz Grundrechte": 2,
+
+    "Wahlrecht": 6,
+    "Parteienrecht": 4,
+
+    "Asylgrundrecht": 8,
+
+    "Staatliche Schutzpflichten": 6
+  },
+  "GmbHG": {
+    "Geschäftsführer Haftung": 12,
+    "Geschäftsführer Abberufung": 8,
+    "Geschäftsführer Bestellung": 4,
+
+    "Gesellschafterversammlung": 8,
+    "Gesellschafterbeschluss": 8,
+    "Beschlussmängel": 6,
+
+    "Gesellschafterstreit": 8,
+    "Gesellschafter Ausschluss": 4,
+    "Einziehung Geschäftsanteil": 4,
+
+    "Geschäftsanteil Übertragung": 4,
+    "Abtretung Geschäftsanteil": 3,
+
+    "Stammeinlage": 6,
+    "Kapitalaufbringung": 6,
+    "Kapitalerhaltung": 8,
+
+    "Gründung GmbH": 6,
+    "Unternehmergesellschaft": 4,
+
+    "Insolvenz Geschäftsführer": 6,
+    "Insolvenzverschleppung": 4,
+
+    "Vertretungsmacht Geschäftsführer": 4,
+    "Interessenkonflikt Geschäftsführer": 2,
+
+    "Treuepflicht Gesellschafter": 4,
+    "Minderheitenschutz GmbH": 2,
+
+    "Wettbewerbsverbot Geschäftsführer": 3,
+    "Compliance Geschäftsführer": 2,
+
+    "Haftung Gesellschafter": 2
+  },
+  "UrhG": {
+    "Urheberrecht Software": 12,
+    "Computerprogramm Urheberrecht": 7,
+    "Quellcode Urheberrecht": 5,
+
+    "Urheberrecht Bilder": 8,
+    "Fotografie Urheberrecht": 6,
+    "Bildnutzung": 4,
+
+    "Urheberrecht Internet": 6,
+    "Website Inhalte": 7,
+    "Online Veröffentlichung": 4,
+
+    "Urheberrecht Künstliche Intelligenz": 10,
+    "KI generierte Inhalte": 10,
+
+    "Werkbegriff Urheberrecht": 6,
+    "Schöpfungshöhe": 8,
+
+    "Urheberpersönlichkeitsrecht": 4,
+    "Namensnennung Urheber": 2,
+
+    "Nutzungsrechte": 8,
+    "Lizenzvertrag Urheberrecht": 7,
+    "Ausschließliche Nutzungsrechte": 4,
+
+    "Arbeitnehmer Urheberrecht": 4,
+    "Software Arbeitnehmer": 4,
+
+    "Filesharing": 4,
+    "Streaming Urheberrecht": 2,
+
+    "Abmahnung Urheberrecht": 8,
+    "Unterlassungsanspruch Urheberrecht": 4,
+
+    "Schadensersatz Urheberrecht": 7,
+    "Lizenzanalogie": 4,
+
+    "Open Source Lizenz": 4,
+    "GitHub Lizenz": 3,
+
+    "Datenbank Urheberrecht": 4,
+    "Web Scraping Urheberrecht": 3,
+
+    "Bearbeitung Werk": 4,
+    "Plagiat": 4,
+
+    "Musik Urheberrecht": 3,
+    "Video Urheberrecht": 3
+  },
+  "DDG": {
+    "Impressumspflicht": 3,
+    "Anbieterkennzeichnung": 2,
+    "Plattformhaftung": 2,
+    "Hostprovider Haftung": 2,
+    "Notice and Takedown": 2,
+    "Online Plattform": 1,
+    "Social Media Plattform": 1,
+    "Bewertungsplattform": 1,
+    "Nutzerinhalte": 1,
+    "Rechtswidrige Inhalte": 1,
+    "Haftung Diensteanbieter": 1,
+    "Digitale Dienste": 1,
+    "Online Marktplatz": 1,
+    "Provider Haftung": 1
+  },
+  "GewO": {
+    "Gewerbeanmeldung": 8,
+    "Gewerbeuntersagung": 12,
+    "Unzuverlässigkeit Gewerbetreibender": 8,
+    "Gewerbeerlaubnis": 6,
+    "Erlaubnispflichtiges Gewerbe": 5,
+    "Bewachungsgewerbe": 4,
+    "Immobilienmakler GewO": 4,
+    "Versicherungsvermittler": 3,
+    "Finanzanlagenvermittler": 3,
+    "Wohnimmobilienverwalter": 2,
+
+    "Gewerbefreiheit": 4,
+    "Gewerbeausübung": 2,
+    "Gewerbeuntersagung § 35 GewO": 6,
+
+    "Reisegewerbe": 2,
+    "Märkte und Messen": 2,
+
+    "Arbeitszeugnis": 6,
+    "Zeugnisberichtigung": 4,
+    "Weisungsrecht Arbeitgeber": 6,
+
+    "Wettbewerbsverbot Arbeitnehmer": 2,
+
+    "Gewerbezentralregister": 2
+  },
+  "HGB": {
+    "Kaufmann": 8,
+
+    "Handelsgeschäft": 6,
+    "Handelsbrauch": 4,
+
+    "Firma Handelsrecht": 6,
+    "Firmenfortführung": 4,
+
+    "Handelsregister": 6,
+    "Eintragung Handelsregister": 4,
+
+    "Prokura": 10,
+    "Handlungsvollmacht": 6,
+
+    "Handelsvertreter": 8,
+    "Ausgleichsanspruch Handelsvertreter": 8,
+    "Vertragshändler": 4,
+
+    "Kommissionär": 3,
+    "Handelsmakler": 2,
+
+    "Rügepflicht": 6,
+    "Handelskauf": 6,
+
+    "Buchführungspflicht": 4,
+    "Jahresabschluss": 4,
+
+    "Haftung Kaufmann": 4,
+
+    "Transportrecht": 3,
+    "Frachtvertrag": 2,
+
+    "Lagergeschäft": 2
+  },
+  "AktG": {
+    "Hauptversammlung": 5,
+    "Anfechtung Hauptversammlungsbeschluss": 6,
+    "Beschlussmängelrecht": 6,
+
+    "Vorstand Haftung": 7,
+    "Business Judgment Rule": 4,
+
+    "Aufsichtsrat": 4,
+    "Aufsichtsrat Pflichten": 4,
+
+    "Aktionärsrechte": 3,
+    "Minderheitsaktionäre": 4,
+
+    "Kapitalerhöhung": 4,
+    "Kapitalherabsetzung": 2,
+
+    "Squeeze Out": 4,
+    "Unternehmensbewertung": 2,
+
+    "Dividende": 2,
+
+    "Corporate Governance": 2,
+
+    "Insiderhandel Gesellschaftsrecht": 1,
+
+    "Unternehmensübernahme": 2
+  },
+
+  "BAföG": {
+    "Förderungshöchstdauer": 5,
+    "Fachrichtungswechsel": 5,
+    "Leistungsnachweis": 4,
+    "Elterneinkommen": 4,
+    "Anrechnung Einkommen Eltern": 4,
+
+    "Eigenes Einkommen BAföG": 4,
+    "Vermögensanrechnung": 6,
+
+    "AuslandsBAföG": 4,
+
+    "Zweitstudium BAföG": 2,
+    "Masterstudium BAföG": 2,
+
+    "Studienabbruch BAföG": 2,
+    "Urlaubssemester BAföG": 1,
+
+    "Förderungsfähigkeit Ausbildung": 2,
+    "Staatsangehörigkeit BAföG": 1,
+
+    "Rückforderung BAföG": 2,
+    "Rückzahlung BAföG": 2,
+
+    "Härtefall BAföG": 2,
+
+    "Wohnkostenzuschlag BAföG": 1,
+
+    "BAföG Auskunftspflichten": 1,
+
+    "Förderung Ausland": 1,
+
+    "Studienverzögerung": 1
+  },
+  "FreizügG/EU": {
+    "Freizügigkeitsrecht": 6,
+    "Unionsbürger Aufenthalt": 4,
+    "Arbeitnehmerfreizügigkeit": 4,
+    "Selbständige Freizügigkeit": 2,
+
+    "Familienangehörige Unionsbürger": 5,
+    "Familiennachzug EU Bürger": 4,
+
+    "Daueraufenthaltsrecht": 4,
+    "Verlust Freizügigkeitsrecht": 4,
+
+    "Ausweisung Unionsbürger": 3,
+    "Öffentliche Ordnung Freizügigkeit": 2,
+
+    "Sozialleistungen Unionsbürger": 4,
+
+    "Existenzmittel Freizügigkeit": 2
+  },
+    "GeschGehG": {
+      "Geschäftsgeheimnis": 3,
+      "Geheimnisschutz": 2,
+      "Betriebsgeheimnis": 2,
+      "Know-how Schutz": 1,
+      "Vertrauliche Informationen": 1,
+      "Geheimnisverrat": 2,
+      "Mitarbeiter Geschäftsgeheimnis": 2,
+      "Wettbewerber Geschäftsgeheimnis": 1,
+      "Unterlassungsanspruch Geschäftsgeheimnis": 1
+    },
+    "WoGG": {
+      "Wohngeldanspruch": 5,
+      "Wohngeldberechtigung": 3,
+
+      "Einkommensanrechnung Wohngeld": 5,
+      "Haushaltsmitglieder Wohngeld": 3,
+
+      "Mietzuschuss": 3,
+      "Lastenzuschuss": 2,
+
+      "Wohngeld und BAföG": 2,
+      "Wohngeld und Bürgergeld": 2,
+
+      "Wohngeld Rückforderung": 2,
+      "Mitwirkungspflichten Wohngeld": 1,
+
+      "Wohngeld Ausland": 1,
+      "Wohngeld Selbständige": 1
+    },
+    "OWiG": {
+      "Bußgeldverfahren": 10,
+      "Ordnungswidrigkeit": 8,
+
+      "Geschwindigkeitsüberschreitung": 8,
+      "Rotlichtverstoß": 4,
+      "Abstandsverstoß": 4,
+      "Handy am Steuer": 4,
+      "Parkverstoß": 2,
+
+      "Fahrverbot": 8,
+      "Bußgeldbescheid": 8,
+
+      "Anhörung Betroffener": 4,
+      "Akteneinsicht Bußgeldverfahren": 6,
+
+      "Messfehler Geschwindigkeitsmessung": 4,
+      "Messverfahren": 4,
+
+      "Verjährung Ordnungswidrigkeit": 4,
+
+      "Unternehmensbußgeld": 4,
+      "Verbandsgeldbuße": 2,
+
+      "Rechtsbeschwerde OWiG": 6,
+      "Einspruch Bußgeldbescheid": 6,
+
+      "Beweisverwertungsverbot": 3
+    },
+    "EStG": {
+      "Werbungskosten": 3,
+      "Betriebsausgaben": 4,
+      "Sonderausgaben": 4,
+      "Homeoffice": 3,
+      "Doppelte Haushaltsführung": 4,
+      "Entfernungspauschale": 4,
+      "Dienstwagen": 3,
+      "Arbeitslohn": 5,
+      "Sachbezüge": 3,
+      "Bonuszahlungen": 2,
+      "Selbständige Einkommensteuer": 3,
+      "Freiberufler Einkommensteuer": 3,
+      "Vermietung und Verpachtung": 3,
+      "Kapitalerträge": 3,
+      "Veräußerungsgewinn": 3,
+      "Private Veräußerungsgeschäfte": 3,
+      "Kryptowährung Einkommensteuer": 2,
+      "Kinderfreibetrag": 3,
+      "Kindergeld Einkommensteuer": 2,
+      "Ehegattensplitting": 2,
+      "Verlustabzug": 3,
+      "Steuerliche Anerkennung": 2,
+      "Liebhaberei": 2,
+      "Steuerhinterziehung Einkommensteuer": 2,
+      "Betriebsprüfung Einkommensteuer": 2,
+      "Abfindung Einkommensteuer": 2,
+      "Progressionsvorbehalt": 2
+  },
+    "AO": {
+      "Steuerbescheid": 5,
+      "Einspruch Steuerbescheid": 5,
+      "Steuerfestsetzung": 4,
+      "Steuerschätzung": 3,
+
+      "Außenprüfung": 4,
+      "Betriebsprüfung": 4,
+
+      "Steuerhinterziehung": 3,
+      "Leichtfertige Steuerverkürzung": 2,
+
+      "Festsetzungsverjährung": 3,
+      "Zahlungsverjährung": 2,
+
+      "Änderung Steuerbescheid": 3,
+      "Rücknahme Steuerbescheid": 2,
+      "Wiedereinsetzung vorigen Stand": 2,
+
+      "Mitwirkungspflichten Steuerpflichtiger": 2,
+      "Steuergeheimnis": 2,
+
+      "Haftung Steuerschulden": 2,
+
+      "Steuererstattung": 2,
+
+      "Säumniszuschlag": 2,
+
+      "Vollstreckung Steuerforderung": 2,
+
+      "Steuerliche Fristen": 2
+  },
+    "StVO": {
+      "Geschwindigkeitsüberschreitung": 6,
+      "Rotlichtverstoß": 4,
+      "Abstandsverstoß": 3,
+      "Handy am Steuer": 3,
+      "Alkohol am Steuer": 4,
+
+      "Parkverstoß": 2,
+      "Halteverbot": 2,
+
+      "Vorfahrt": 5,
+      "Rechts vor Links": 3,
+
+      "Überholen": 2,
+      "Abbiegen": 2,
+
+      "Fußgängerüberweg": 2,
+      "Fahrradverkehr": 2,
+      "E Scooter": 2,
+
+      "Rettungsgasse": 1,
+
+      "Unfallflucht Straßenverkehr": 1,
+      "Verkehrsunfall Haftung": 3,
+
+      "Sicherheitsabstand": 2,
+
+      "Fahrerlaubnis Entziehung": 1,
+
+      "Verkehrszeichen": 2,
+
+      "Baustelle Verkehr": 1,
+
+      "Winterreifenpflicht": 1,
+
+      "Ladungssicherung": 1
+    },
+    "SGB_1": {
+      "Sozialleistungsanspruch": 4,
+      "Mitwirkungspflichten": 4,
+      "Beratungspflicht Behörde": 4,
+      "Auskunftspflicht Behörde": 3,
+      "Sozialrechtlicher Herstellungsanspruch": 5,
+      "Vertrauensschutz Sozialrecht": 3,
+      "Sozialgeheimnis": 2
+    },
+    "SGB_10": {
+      "Verwaltungsakt": 10,
+      "Anhörung Beteiligter": 3,
+      "Akteneinsicht Sozialrecht": 3,
+      "Sozialdatenschutz": 4,
+      "Datenübermittlung Behörden": 2,
+      "Erstattungsanspruch Sozialleistungsträger": 2
+    },
+    "SGB_2": {
+      "Bürgergeld": 10,
+      "Bedarfsgemeinschaft": 12,
+      "Kosten der Unterkunft": 12,
+      "Sanktionen Bürgergeld": 8,
+      "Meldeversäumnis": 2,
+      "Erwerbsfähigkeit": 4,
+      "Zumutbare Arbeit": 4,
+      "Rückforderung Bürgergeld": 4,
+      "Aufhebung Bewilligungsbescheid": 4,
+      "Alleinerziehende Mehrbedarf": 2
+    },
+    "SGB_3": {
+      "Arbeitslosengeld I": 8,
+      "Arbeitslosmeldung": 2,
+      "Arbeitsförderung": 4,
+      "Weiterbildungsförderung": 4,
+      "Berufliche Weiterbildung": 4,
+      "Vermittlungsvorschlag": 2,
+      "Kurzarbeitergeld": 4,
+      "Insolvenzgeld": 3,
+      "Förderung Beschäftigung": 3
+    },
+    "SGB_4": {
+      "Sozialversicherungspflicht": 6,
+      "Scheinselbständigkeit": 6,
+      "Beschäftigungsverhältnis": 4,
+      "Statusfeststellungsverfahren": 2
+    },
+    "SGB_5": {
+      "Krankenversicherung Leistung": 7,
+      "Krankengeld": 6,
+      "Hilfsmittel Krankenversicherung": 5,
+      "Arzneimittel Erstattung": 3,
+      "Rehabilitationsleistung": 4,
+      "Krankenhausbehandlung": 5,
+      "Psychotherapie Krankenversicherung": 3,
+      "Genehmigungsfiktion": 5,
+      "Leistungsablehnung Krankenkasse": 3,
+      "Zahnbehandlung Krankenkasse": 3,
+      "Häusliche Krankenpflege": 3,
+      "Pflegehilfsmittel": 3
+    },
+    "SGB_9": {
+      "Schwerbehinderung": 8,
+      "Grad der Behinderung": 7,
+      "Gleichstellung Behinderung": 3,
+      "Teilhabe Arbeitsleben": 4,
+      "Rehabilitation Behinderung": 4,
+      "Inklusion Arbeitsplatz": 3,
+      "Behinderung Arbeitnehmer": 3,
+      "Integrationsamt": 3,
+      "Kündigung Schwerbehinderte": 4,
+      "Assistenzleistungen": 2
+    }
+}
