@@ -1,4 +1,3 @@
-from datetime import datetime
 from openai import OpenAI
 from openai import APIError
 import os

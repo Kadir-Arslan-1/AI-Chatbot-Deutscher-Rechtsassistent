@@ -1,6 +1,5 @@
 from pinecone import Pinecone
 from llm_query_expansion import Query_Expander
-from datetime import datetime
 
 
 class RetrievalPipeline:

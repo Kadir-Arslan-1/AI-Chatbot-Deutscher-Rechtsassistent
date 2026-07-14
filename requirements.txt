@@ -3,12 +3,11 @@ sentence-transformers
 python-dotenv
 openai
 pydantic
-protobuf
-requests
-beautifulsoup4
-langchain-core
-langchain-text-splitters
-trafilatura
-ddgs
+# requests
+# beautifulsoup4
+# langchain-core
+# langchain-text-splitters
+# trafilatura
+# ddgs
 pinecone
-tqdm
+# tqdm

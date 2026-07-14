@@ -1,6 +1,5 @@
 import json
 import os
-import glob
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import streamlit as st
 from dotenv import load_dotenv
@@ -33,7 +32,8 @@ is_ratgeber_file_ready = True
 # hier, nutzen wir xml daten die ich aus gesetze-im-internet heruntergeladen habe:
 # Für dieses Projekt werden wir die 34 am häufigsten angewandten Gesetzbücher heranziehen.
 
-while not is_gesetze_file_ready:
+if not is_gesetze_file_ready:
+    import glob
     DATA_DIR = "gesetze/"
     OUTPUT_JSON = "metadata/gesetze_database.json"
     alle_gesetze = []
@@ -54,13 +54,11 @@ while not is_gesetze_file_ready:
         json.dump(alle_gesetze, f, ensure_ascii=False, indent=4)
         print(f"Insgesamt {len(alle_gesetze)} Paragrafen/Artikel aus {len(xml_dateien)} Gesetzbüchern gespeichert.")
 
-    break
-
 
 # 2) DSGVO-Retrival
 # die Datenschutz-Grundverordnung (DSGVO) gehört der Europäischen Union, deswegen es is nicht in gesetze-im-internet.
 # Für diesen Zweck werden wir website-scraping verwenden und die DAten aus dsgvo-gesetz.de abrufen.
-while not is_dsgvo_file_ready:
+if not is_dsgvo_file_ready:
     OUTPUT_JSON_DSGVO = "data/dsgvo_parsed.json"
     OUTPUT_JSON_METADATA = "metadata/gesetze_database.json"
 
@@ -83,8 +81,6 @@ while not is_dsgvo_file_ready:
     with open(OUTPUT_JSON_METADATA, "w", encoding="utf-8") as f:
         json.dump(master, f, indent=4, ensure_ascii=False)
 
-    break
-
 
 # 3) Gericht-Urteile-Retrival
 # Wir werden Gerichtsurteile aus Openjur extrahieren, um unsere Datenbank zu erweitern.
@@ -92,7 +88,7 @@ while not is_dsgvo_file_ready:
 # Sie bietet freien und unabhängigen Zugang zu mehr als 625.000 deutschen Gerichtsentscheidungen im Volltext.
 # Ich habe 5 Api-Schlüssel aus Open-legal-gate geholt.
 
-while not is_urteil_file_ready:
+if not is_urteil_file_ready:
     # Es wird mehrere api keys dafür geben:
     my_api_keys = []
 
@@ -124,8 +120,6 @@ while not is_urteil_file_ready:
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(urteile_data, f, ensure_ascii=False, indent=4)
 
-    break
-
 
 # 4) Offizielle Ratgeber-Retrival
 # Wir werden Ratgeber, Mitteilungen, Warnungen oder ähnliches aus vertrauenswürdigen Quellen extrahieren.
@@ -135,7 +129,7 @@ while not is_urteil_file_ready:
 # DuckDuckGo: eine Bibliothek, mit der man Suchanfragen an die Suchmaschine sendet und Suchergebnisse (z. B. Webseiten, Bilder oder Nachrichten) programmgesteuert abruft.
 # Trafilatura: eine Bibliothek, die den Hauptinhalt von Webseiten (z. B. Fließtext, Titel und Metadaten) automatisch extrahiert und dabei Werbung, Navigation und andere störende Elemente entfernt.
 
-while not is_ratgeber_file_ready:
+if not is_ratgeber_file_ready:
     INPUT_MASTER_JSON = "json_files/themen_nach_gesetze.json"
     OUTPUT_RATGEBER_JSON = "metadata/master_ratgeber_database.json"
 
@@ -148,8 +142,6 @@ while not is_ratgeber_file_ready:
     # Durchsuchen, Filtern, Extrahieren und Speichern
     Ratgeber_Retriever.build_ratgeber_pipeline(INPUT_MASTER_JSON, OUTPUT_RATGEBER_JSON)
 
-    break
-
 
 # jetzt, haben wir drei gut strukturierte Metadatendateien, die wir in die Vektordatenbank eingeben können.
 # Gesetze, Urteile und Ratgeber
@@ -161,7 +153,7 @@ while not is_ratgeber_file_ready:
 is_chunking_ready = True
 are_chunks_embedded = True
 
-while not is_chunking_ready:
+if not is_chunking_ready:
     from chunking_pipeline import Chunking_Langchain
 
     # Da 1 Token im Deutschen oft 3-4 Zeichen entspricht, nehmen wir 1200 Zeichen.
@@ -181,12 +173,11 @@ while not is_chunking_ready:
 
     # Alle Dokumente in Chunks unterteilen und ein Beispiel ausdrucken:
     final_chunks = Chunking_Langchain.run_chunking_pipeline(input_files)
-    break
 
 
 INDEX_NAME = "german-legal-assistant-e5"
 
-while not are_chunks_embedded:
+if not are_chunks_embedded:
     from chunks_embedding_pipeline import Chunks_Embedder
 
     EMBEDDING_DIMENSION = 768
@@ -202,7 +193,6 @@ while not are_chunks_embedded:
         pinecone_index = Chunks_Embedder.setup_pinecone()
         # Lade alle generierten Chunks in Vector-Datenbank
         Chunks_Embedder.embed_and_upload(final_chunks, pinecone_index)
-    break
 
 
 
