@@ -1,14 +1,12 @@
-import xml.etree.ElementTree as ET
 import json
-
 
 with open("json_files/gesetze.json", "r", encoding="utf-8") as f:
     gesetze = json.load(f)      # {'GG': 'Grundgesetz für...', 'BGB': 'Bürgerliches Gesetzbuch'},
 
-
 class Gesetze_Retriever:
 
     def parse_gesetz_xml(xml_file_path: str):
+        import xml.etree.ElementTree as ET
         print(f"Lese XML-Datei: {xml_file_path}...")
         tree = ET.parse(xml_file_path)
         root = tree.getroot()

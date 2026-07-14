@@ -1,10 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
-import time
-
-
 class DSGVO_Retriever:
-
     def get_dsgvo_hierarchy(article_num: int) -> str:
         # Kapitel und Abschnitt für allen DSGVO-Artikel:
         structure = [
@@ -36,6 +30,9 @@ class DSGVO_Retriever:
 
 
     def scrape_dsgvo(output_path: str):
+        import requests
+        from bs4 import BeautifulSoup
+        import time
         base_url = "https://dsgvo-gesetz.de/art-{}-dsgvo/"
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"}
 

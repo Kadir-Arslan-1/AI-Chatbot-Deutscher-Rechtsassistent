@@ -16,12 +16,6 @@ HF_TOKEN = os.environ.get("HF_TOKEN")
 # Um einen Gut-strukturierte Datenbank für einen Rechtsassistenten zu erstellen, brauchen wir drei quellen:
 # Gesetzte, offizielle Urteile von Gerichtsverfahren und Ratgeber aus vertrauenswürdigen Quellen.
 
-# Classes Importieren
-from retriever_gesetze import Gesetze_Retriever
-from retriever_dsgvo import DSGVO_Retriever
-from retriever_urteile import Urteile_Retriever
-from retriever_ratgeber import Ratgeber_Retriever
-
 is_gesetze_file_ready = True
 is_dsgvo_file_ready = True
 is_urteil_file_ready = True
@@ -33,6 +27,7 @@ is_ratgeber_file_ready = True
 # Für dieses Projekt werden wir die 34 am häufigsten angewandten Gesetzbücher heranziehen.
 
 if not is_gesetze_file_ready:
+    from retriever_gesetze import Gesetze_Retriever
     import glob
     DATA_DIR = "gesetze/"
     OUTPUT_JSON = "metadata/gesetze_database.json"
@@ -59,6 +54,7 @@ if not is_gesetze_file_ready:
 # die Datenschutz-Grundverordnung (DSGVO) gehört der Europäischen Union, deswegen es is nicht in gesetze-im-internet.
 # Für diesen Zweck werden wir website-scraping verwenden und die DAten aus dsgvo-gesetz.de abrufen.
 if not is_dsgvo_file_ready:
+    from retriever_dsgvo import DSGVO_Retriever
     OUTPUT_JSON_DSGVO = "data/dsgvo_parsed.json"
     OUTPUT_JSON_METADATA = "metadata/gesetze_database.json"
 
@@ -89,6 +85,7 @@ if not is_dsgvo_file_ready:
 # Ich habe 5 Api-Schlüssel aus Open-legal-gate geholt.
 
 if not is_urteil_file_ready:
+    from retriever_urteile import Urteile_Retriever
     # Es wird mehrere api keys dafür geben:
     my_api_keys = []
 
@@ -130,6 +127,7 @@ if not is_urteil_file_ready:
 # Trafilatura: eine Bibliothek, die den Hauptinhalt von Webseiten (z. B. Fließtext, Titel und Metadaten) automatisch extrahiert und dabei Werbung, Navigation und andere störende Elemente entfernt.
 
 if not is_ratgeber_file_ready:
+    from retriever_ratgeber import Ratgeber_Retriever
     INPUT_MASTER_JSON = "json_files/themen_nach_gesetze.json"
     OUTPUT_RATGEBER_JSON = "metadata/master_ratgeber_database.json"
 
