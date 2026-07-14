@@ -200,16 +200,21 @@ from pinecone_retrieval_pipeline import RetrievalPipeline
 
 # Zentraler Cache für die Modelle im Backend
 @st.cache_resource(show_spinner="⏳ Lade juristische Datenbank-Modelle ins Backend...")
-def get_retrieval_models():
-    """Lädt die Modelle genau einmal und hält sie für Streamlit im RAM."""
-    e_model = SentenceTransformer("intfloat/multilingual-e5-base")
-    r_model = CrossEncoder("cross-encoder/msmarco-MiniLM-L6-en-de-v1")
-    return e_model, r_model
+def get_pipeline():
+    print("uploading embedder...")
+    embedder = SentenceTransformer("intfloat/multilingual-e5-base")
+    print("uploading reranker...")
+    reranker = CrossEncoder("cross-encoder/msmarco-MiniLM-L6-en-de-v1")
 
-# Modelle global für diese Datei abrufen
-embedder, reranker = get_retrieval_models()
+    return RetrievalPipeline(
+        PINECONE_API_KEY,
+        HF_TOKEN,
+        INDEX_NAME,
+        embedder,
+        reranker,
+    )
 
-RetrievalPipeline = RetrievalPipeline(PINECONE_API_KEY, HF_TOKEN, INDEX_NAME, embedder, reranker)
+pinecone_pipeline = get_pipeline()
 
 
 
@@ -237,7 +242,7 @@ LLMManager = LLMManager(api_key=openai_api_key, ai_model=ai_model)
 
 # Wir werden diese beiden funktionen in app.py implementieren.
 def get_pinecone_manager():
-    return RetrievalPipeline
+    return pinecone_pipeline
 
 def get_llm_manager():
     return LLMManager
