@@ -2,7 +2,6 @@ import json
 import os
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-import tiktoken
 
 class Chunking_Langchain:
     def __init__(self, chunk_size:int, chunk_overlap:int):

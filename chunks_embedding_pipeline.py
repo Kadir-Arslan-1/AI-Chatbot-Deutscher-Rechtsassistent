@@ -1,11 +1,8 @@
 import re
 import time
-import os
 from tqdm import tqdm
 from pinecone import Pinecone, ServerlessSpec
 from openai import OpenAI, RateLimitError
-from dotenv import load_dotenv
-load_dotenv()
 
 
 class Chunks_Embedder:

@@ -1,10 +1,6 @@
 from pinecone import Pinecone
 from llm_query_expansion import Query_Expander
 from openai import OpenAI
-import os
-from dotenv import load_dotenv
-load_dotenv()
-from datetime import datetime
 
 
 class RetrievalPipeline:

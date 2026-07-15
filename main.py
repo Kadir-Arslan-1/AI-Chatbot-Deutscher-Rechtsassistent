@@ -1,6 +1,6 @@
 import json
 import os
-from sentence_transformers import SentenceTransformer, CrossEncoder
+from sentence_transformers import CrossEncoder
 import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
