@@ -1,15 +1,22 @@
 from pinecone import Pinecone
 from llm_query_expansion import Query_Expander
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
+load_dotenv()
+from datetime import datetime
 
 
 class RetrievalPipeline:
-    def __init__(self, pinecone_api_key, hf_token, index_name, embedder, reranker):
+    def __init__(self, pinecone_api_key, openai_api_key, hf_token, index_name, embedding_model, reranker):
         self.pinecone_api_key = pinecone_api_key
         self.pc = Pinecone(api_key=self.pinecone_api_key)
         self.hf_token = hf_token
         self.index_name = index_name
         self.index = self.pc.Index(self.index_name)
-        self.embedder = embedder
+        self.openai_api_key = openai_api_key
+        self.openai_client = OpenAI(api_key=self.openai_api_key)
+        self.model = embedding_model
         self.reranker = reranker
         self.query_expander = Query_Expander()
 
@@ -35,8 +42,14 @@ class RetrievalPipeline:
         except:
             formatted_query = f"query: {user_query}"
 
-        query_vector = self.embedder.encode(formatted_query, convert_to_numpy=True).tolist()
+        # Den Vektor über die OpenAI API generieren
+        response = self.openai_client.embeddings.create(
+            input=formatted_query,
+            model=self.model
+        )
 
+        # Den Vektor aus der Antwort extrahieren
+        query_vector = response.data[0].embedding
 
         document_types = ["gesetz", "urteil", "ratgeber"]
 
@@ -84,7 +97,6 @@ class RetrievalPipeline:
         # Alle Dokumente absteigend nach semantischer Relevanz sortieren:
         reranked_docs = sorted(all_retrieved_docs, key=lambda x: x["rerank_score"], reverse=True)
 
-        # die BESTEN PRO KATEGORIE AUSWÄHLEN (Strict Filtering)
         # die besten ergebnisse auswählen:
         final_docs = []
         counts = {"gesetz": 0, "urteil": 0, "ratgeber": 0}

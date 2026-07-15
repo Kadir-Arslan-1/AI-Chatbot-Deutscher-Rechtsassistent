@@ -5,7 +5,10 @@ import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
 
-PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
+pinecone_api_key = os.environ.get("PINECONE_API_KEY")
+openai_api_key = os.getenv(f"OPENAI_API_KEY_1")
+openai_api_key_encoder = os.getenv(f"OPENAI_API_KEY_2")
+
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 
@@ -118,6 +121,7 @@ if not is_urteil_file_ready:
         json.dump(urteile_data, f, ensure_ascii=False, indent=4)
 
 
+
 # 4) Offizielle Ratgeber-Retrival
 # Wir werden Ratgeber, Mitteilungen, Warnungen oder ähnliches aus vertrauenswürdigen Quellen extrahieren.
 # Dadurch werden die chatbot mehr über das Thema wissen.
@@ -151,8 +155,13 @@ if not is_ratgeber_file_ready:
 is_chunking_ready = True
 are_chunks_embedded = True
 
+index_name = "german-legal-assistant-large"
+embedding_model = "text-embedding-3-large"
+
 if not is_chunking_ready:
+
     from chunking_pipeline import Chunking_Langchain
+    from chunks_embedding_pipeline import Chunks_Embedder
 
     # Da 1 Token im Deutschen oft 3-4 Zeichen entspricht, nehmen wir 1200 Zeichen.
     # Der Overlap sorgt dafür, dass juristische Kontexte an den Schnittstellen nicht zerreißen.
@@ -172,17 +181,9 @@ if not is_chunking_ready:
     # Alle Dokumente in Chunks unterteilen und ein Beispiel ausdrucken:
     final_chunks = Chunking_Langchain.run_chunking_pipeline(input_files)
 
-
-INDEX_NAME = "german-legal-assistant-e5"
-
-if not are_chunks_embedded:
-    from chunks_embedding_pipeline import Chunks_Embedder
-
-    EMBEDDING_DIMENSION = 768
-    BATCH_SIZE = 100
-
-    Chunks_Embedder = Chunks_Embedder(pinecone_api_key=PINECONE_API_KEY, hf_token=HF_TOKEN, index_name=INDEX_NAME,
-                                      embedding_dimension=EMBEDDING_DIMENSION,batch_size=BATCH_SIZE)
+    # jetzt chunks in pinecone vector datenbank hochzuladen:
+    Chunks_Embedder = Chunks_Embedder(pinecone_api_key=pinecone_api_key, openai_api_key=openai_api_key_encoder,
+                                      index_name=index_name, embedding_model=embedding_model)
 
     if not final_chunks:
         print("Keine Chunks generiert. Abbruch...")
@@ -200,30 +201,24 @@ from pinecone_retrieval_pipeline import RetrievalPipeline
 
 # Zentraler Cache für die Modelle im Backend
 @st.cache_resource(show_spinner="⏳ Lade juristische Datenbank-Modelle ins Backend...")
-def get_pipeline():
+def upload_reranker():
     print("uploading embedder...")
-    embedder = SentenceTransformer("intfloat/multilingual-e5-base")
-    print("uploading reranker...")
     reranker = CrossEncoder("cross-encoder/msmarco-MiniLM-L6-en-de-v1")
+    return reranker
 
-    return RetrievalPipeline(
-        PINECONE_API_KEY,
-        HF_TOKEN,
-        INDEX_NAME,
-        embedder,
-        reranker,
-    )
+reranker = upload_reranker()
 
-pinecone_pipeline = get_pipeline()
+embedder = None
 
-
+pinecone_manager = RetrievalPipeline(pinecone_api_key=pinecone_api_key, openai_api_key= openai_api_key_encoder,
+                                     hf_token=HF_TOKEN, index_name=index_name, embedding_model=embedding_model, reranker=reranker)
 
 
 # LLM pipeline:
 from llm_pipeline import LLMManager
 from llm_query_expansion import Query_Expander
 
-openai_api_key = os.getenv(f"OPENAI_API_KEY")
+
 ai_model = "gpt-5.4-mini"
 ai_model_query_expansion = "gpt-5.4-nano"
 
@@ -242,7 +237,7 @@ LLMManager = LLMManager(api_key=openai_api_key, ai_model=ai_model)
 
 # Wir werden diese beiden funktionen in app.py implementieren.
 def get_pinecone_manager():
-    return pinecone_pipeline
+    return pinecone_manager
 
 def get_llm_manager():
     return LLMManager

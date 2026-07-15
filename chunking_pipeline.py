@@ -2,7 +2,7 @@ import json
 import os
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-
+import tiktoken
 
 class Chunking_Langchain:
     def __init__(self, chunk_size:int, chunk_overlap:int):
@@ -11,7 +11,7 @@ class Chunking_Langchain:
 
 
     # Json laden und konvertierung funktionen:
-    def load_and_convert_to_documents(filepath):
+    def load_and_convert_to_documents(self, filepath):
         if not os.path.exists(filepath):
             print(f"⚠️ Datei nicht gefunden: {filepath}")
             return []

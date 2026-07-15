@@ -16,7 +16,7 @@ class QueryExpansionResult(BaseModel):
 
 class Query_Expander:
     def __init__(self):
-        self.api_key = os.getenv(f"OPENAI_API_KEY")
+        self.api_key = os.getenv(f"OPENAI_API_KEY_1")
         self.client = OpenAI(api_key=self.api_key)
         self.model = "gpt-5.4-nano"
 
