@@ -40,7 +40,7 @@ Alle Daten wurden ordentlich strukturiert (ID, Typ, Rechtsgebiet, Quelle, Paragr
 ### 2. Chunking & Embeddings
 Damit die KI die Texte durchsuchen kann, mussten sie in kleine Stücke (Chunks) zerteilt werden:
 * **Chunking (`chunking_pipeline.py`):** Hier kam **LangChain** ins Spiel. Mit dem `RecursiveCharacterTextSplitter` habe ich die Texte in Blöcke von 1200 Zeichen mit einem Overlap von 200 Zeichen aufgeteilt, damit keine wichtigen Sätze zerrissen werden.
-* **Embeddings (`chunks_embedding_pipeline.py`):** Diese Chunks wurden dann mit dem Modell `intfloat/multilingual-e5-base` (via `sentence_transformers`) in mathematische Vektoren umgewandelt und in die Vektordatenbank **Pinecone** hochgeladen.
+* **Embeddings (`chunks_embedding_pipeline.py`):** Diese Chunks wurden dann mit dem Modell `text-embedding-3-large` von OpenAI in mathematische Vektoren umgewandelt und in die Vektordatenbank **Pinecone** hochgeladen.
 
 ### 3. Retrieval Pipeline (Die Suchmaschine)
 Wenn ein Nutzer eine Frage stellt, passiert im Hintergrund (`pinecone_retrieval_pipeline.py`) folgendes:
@@ -56,7 +56,7 @@ Wenn ein Nutzer eine Frage stellt, passiert im Hintergrund (`pinecone_retrieval_
 ## 💻 Tech Stack
 * **Sprache:** Python
 * **Frontend:** Streamlit
-* **AI & NLP:** OpenAI API, LangChain, SentenceTransformers, Cross-Encoder
+* **AI & NLP:** OpenAI API, LangChain, Text-Embedding, SentenceTransformers, Cross-Encoder, 
 * **Datenbank:** Pinecone (Vector DB)
 * **Scraping & Daten:** XML-Parsing, Trafilatura, DuckDuckGo-Search, Pydantic
 
